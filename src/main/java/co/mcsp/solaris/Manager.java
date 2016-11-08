@@ -21,6 +21,8 @@ public abstract class Manager {
     config = plugin.getConfig().getConfigurationSection(getName());
 
     this.logger = new vxLogger(logger.name + ":" + getName(), logger);
+
+    if (config.contains("enabled")) setActive(config.getBoolean("enabled"));
   }
 
   public abstract String getName();
