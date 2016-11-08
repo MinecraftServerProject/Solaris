@@ -1,6 +1,7 @@
 package co.mcsp.solaris;
 
 import co.mcsp.solaris.season.SeasonManager;
+import io.vevox.vx.lib.logging.vxLogger;
 import io.vevox.vx.lib.vxPlugin;
 
 /**
@@ -12,22 +13,25 @@ public class Solaris extends vxPlugin {
 
     private SeasonManager seasons;
 
-    private Managers(Solaris plugin) {
+    private Managers(Solaris plugin, vxLogger logger) {
 
     }
 
   }
 
   private Managers managers;
+  private vxLogger logger;
 
   {
+
+    load(lib -> logger = logger());
 
     enable(lib -> {
 
       saveDefaultConfig();
 
       logger().info("Initializing managers...");
-      managers = new Managers(this);
+      managers = new Managers(this, logger());
 
       return true;
 
