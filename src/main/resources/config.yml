@@ -5,7 +5,7 @@ effects:
     enabled: true
     duration: 4
   # duration: GMT-8
-    worlds: [ '-world_nether', '-world_end' ]
+    worlds: [ '!world_nether', '!world_end' ]
   weather:
     enabled: true
     storms:
@@ -16,6 +16,6 @@ effects:
       rainfall-variance: 0.5
     thunder: false
     skeleton-traps: false
-    worlds: [ '-world_nether', '-world_end' ]
+    worlds: [ '!world_nether', '!world_end' ]
   growth:
     enabled: true
