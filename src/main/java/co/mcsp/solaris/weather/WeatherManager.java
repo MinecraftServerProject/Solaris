@@ -12,6 +12,10 @@ public class WeatherManager extends Manager {
 
   public WeatherManager(Solaris plugin, Solaris.Managers managers, vxLogger logger) {
     super(plugin, managers, logger);
+
+    worlds.forEach(w -> w.setGameRuleValue("doWeatherCycle", "false"));
+
+    plugin.getServer().getScheduler().runTaskTimer(plugin, new Storms(worlds), 1L, 0L);
   }
 
   @Override
