@@ -18,7 +18,7 @@ public abstract class Manager {
   public Manager(Solaris plugin, Solaris.Managers managers, vxLogger logger) {
     this.plugin = plugin;
     this.managers = managers;
-    config = plugin.getConfig().getConfigurationSection(getName());
+    config = plugin.getConfig().getConfigurationSection("effects." + getName());
 
     this.logger = new vxLogger(logger.name + ":" + getName(), logger);
 
