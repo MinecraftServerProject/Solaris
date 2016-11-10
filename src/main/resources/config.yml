@@ -1,0 +1,21 @@
+config:
+  worlds: [ 'world', 'world_nether', 'world_end' ]
+effects:
+  time:
+    enabled: true
+    duration: 4
+  # duration: GMT-8
+    worlds: [ '-world_nether', '-world_end' ]
+  weather:
+    enabled: true
+    storms:
+      length-average: 3
+      length-variance: 2
+      probability: 0.05
+      rainfall-average: 0.5
+      rainfall-variance: 0.5
+    thunder: false
+    skeleton-traps: false
+    worlds: [ '-world_nether', '-world_end' ]
+  growth:
+    enabled: true
